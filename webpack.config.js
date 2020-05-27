@@ -32,7 +32,7 @@ module.exports = {
             { test:/\.css$/,use:['style-loader','css-loader']},//配置处理.css文件的第三方loader规则
             { test:/\.less$/,use:['style-loader','css-loader','less-loader']},//这是配置处理.less文件的第三方loader规则
             { test:/\.scss$/,use:['style-loader','css-loader','sass-loader']},//配置处理.scss 文件的第三方loader规则
-            { test:/\.(jpg|png|gif|bmp|jpeg)$/,use:'url-loader'},//处理图片路径的loader
+            { test:/\.(jpg|png|gif|bmp|jpeg)$/,use:'url-loader?limit=10240&name=[name].[ext]&esModule=false'},//处理图片路径的loader
             { test:/\.(ttf|eot|svg|woff|woff2)$/,use:'url-loader'},//处理字体文件的loader
             // { test:/\.js$/, use: 'babel-loader', exclude:/node_modules/}
             { test:/\.vue$/,use:'vue-loader'} //处理vue文件的loader
